@@ -1,5 +1,13 @@
 
-export default function CountryName({params}:any) {
+interface Params {
+  countryName: string; 
+}
+
+interface CountryNameProps {
+  params: Params; 
+}
+
+export default function CountryName({params}: CountryNameProps) {
     let capital = "";
     let population = "";
     let countryExists = true;
