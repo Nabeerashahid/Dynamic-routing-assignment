@@ -1,5 +1,5 @@
 
-export default function CountryName({ params}) {
+export default function CountryName({params}:any) {
     let capital = "";
     let population = "";
     let countryExists = true;
@@ -32,17 +32,17 @@ export default function CountryName({ params}) {
     
     return(
         
-        <>
+        <div>
         <h1 className="text-2xl">{params.countryName}</h1>
         {countryExists ? (
-          <>
+          <div>
             <p>Capital: {capital}</p>
             <p>Population: {population}</p>
-          </>
+          </div>
         ) : (
           <p>This country is not available in the list.</p>
         )}
-        </>
+        </div>
     );
     
 }
